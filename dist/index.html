@@ -6,7 +6,55 @@
     <title>To Do List WebApp</title>
 </head>
 <body>
-    <div class="content"></div>
+    <div class="content">
+        <div class="form-heading">
+            <h1>Add New ToDo</h1>
+        </div>
+        <div class="todos-heading">
+            <h1>Current ToDos</h1>
+        </div>
+
+        <div class="form">
+            <button class="add-todo-button">Add New ToDo</button>
+            <div id="add-todo-form" style="display:none">
+                <form id="add-todo">
+                    <label for="Project">Project:</label>
+                    <select name="Project" id="Project">
+                        <option value="DefaultProject">Default Project</option>
+                        <option value="Create-New-Project">Create New Project</option>
+                    </select>
+
+                    <label for="Title">Title:</label>
+                    <input type="text" id="Title" name="Title">
+
+                    <label for="Description">Description:</label>
+                    <input type="text" id="Description" name="Description">
+
+                    <label for="DueDate">Due Date:</label>
+                    <input type="date" id="DueDate" name="DueDate">
+
+                    <label for="Priority">Priority:</label>
+                    <select name="Priority" id="Priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                    <h4>CheckList Items Added (if any):</h4>
+                    <!-- A lot of DOM manipulation is gonna happen here in the todo-ul tag -->
+                    <ul id="CheckList" class="todo-ul"></ul>
+                </form>
+
+                <input type="text" id="add-to-checklist" name="add-to-checklist" placeholder="Type checklist items here...">
+                <button class="add-to-checklist">Add Item To CheckList</button>
+                <br>
+                <button type="submit" class="submit-button">Submit ToDo</button>
+                <button type="reset" class="reset-button">Reset Form</button>
+                
+            </div>
+        </div>
+        <div class="books"></div>
+    </div>
 
     <script src="main.js"></script>
 
