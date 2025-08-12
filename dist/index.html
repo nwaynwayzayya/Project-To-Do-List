@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List WebApp</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="content">
-        <div class="form-heading">
-            <h1>Add New ToDo</h1>
-        </div>
-        <div class="todos-heading">
-            <h1>Current ToDos</h1>
-        </div>
+        
+        
 
         <div class="form">
+            <div class="form-heading">
+                <h1>Add New ToDo</h1>
+            </div>
+
             <button class="add-todo-button">Add New ToDo</button>
             <div id="add-todo-form" style="display:none">
                 <form id="add-todo">
-                    <label for="Project">Project:</label>
+                    <!-- <label for="Project">Project:</label>
                     <select name="Project" id="Project">
                         <option value="DefaultProject">Default Project</option>
                         <option value="Create-New-Project">Create New Project</option>
-                    </select>
+                    </select> -->
 
                     <label for="Title">Title:</label>
                     <input type="text" id="Title" name="Title">
@@ -53,7 +55,11 @@
                 
             </div>
         </div>
-        <div class="projects"></div>
+        <div class="projects">
+            <div class="todos-heading">
+                <h1>Current ToDos</h1>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>

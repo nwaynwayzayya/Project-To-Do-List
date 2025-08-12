@@ -1,0 +1,197 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4ff, #e8f0ff);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    gap: 30px; /* space between form and todo list */
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* ===== Headings ===== */
+h1 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.form {
+    flex: 1;
+    min-width: 320px;
+}
+
+.form-heading, .todos-heading {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* ===== Buttons ===== */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.add-todo-button {
+    background: #007bff;
+    color: white;
+}
+
+.add-to-checklist {
+    background: #6f42c1;
+    color: white;
+    margin-top: 10px;
+}
+
+.submit-button {
+    background: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+.reset-button {
+    background: #ffc107;
+    color: black;
+    margin-top: 10px;
+}
+
+.remove-todo-button {
+    background: #dc3545;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* ===== Form Styling ===== */
+#add-todo-form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], 
+input[type="date"], 
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ===== Checklist Styling ===== */
+.todo-ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.todo-ul li {
+    background: #f8f9fa;
+    margin-top: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-checklist-item {
+    color: #dc3545;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* ===== Cards for To-Dos ===== */
+.projects {
+    flex: 1;
+    min-width: 320px;
+}
+
+.card {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+/* ===== Priority Colors ===== */
+p:contains("Priority: Low") {
+    color: #28a745;
+}
+
+p:contains("Priority: Medium") {
+    color: #ffc107;
+}
+
+p:contains("Priority: High") {
+    color: #dc3545;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 12px;
+    }
+}
